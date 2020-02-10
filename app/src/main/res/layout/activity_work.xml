@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkActivity"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/text_state"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/background_top"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="스마트 의족 프로토타입 어플리케이션"
+        android:textAlignment="center" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:background="#B1F6DF">
+
+        <Button
+            android:id="@+id/button_connect"
+            android:layout_width="227dp"
+            android:layout_height="238dp"
+            android:text="On"
+            android:textSize = "48dp"
+            android:background="@drawable/circle_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26999998" />
+
+        <TextView
+            android:id="@+id/text_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="배터리 잔량 : 양호"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_connect"
+            app:layout_constraintVertical_bias="0.29000002" />
+
+        <TextView
+            android:id="@+id/text_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자동모드"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_battery" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/background_bottom"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="서울시립대학교 기계정보공학과 \n 이조"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:lines="2"
+        />
+</android.widget.LinearLayout>
